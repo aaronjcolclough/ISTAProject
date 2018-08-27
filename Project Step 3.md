@@ -8,16 +8,16 @@
 #### Database Requirements List
  
 - Basic Soldier Skills
-- First-aid
-- Battle Drills
-- General Orders
-- Land Navigation and Maps
-- PMCS
+	- First-aid
+	- Battle Drills
+	- General Orders
+	- Land Navigation and Maps
+	- PMCS
 - Leadership
-- Counseling
-- NCOER
-- Leave and Pass
-- Forms
+	- Counseling
+	- NCOER
+	- Leave and Pass
+	- Forms
 - Army Programs
 - Drill and Ceremony
 - Uniform Wear and Appearance
