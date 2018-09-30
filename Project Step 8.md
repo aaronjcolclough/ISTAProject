@@ -32,7 +32,7 @@ V
 **Subcategories**
 
 | Column | Type | Null | Identity | Key |
-| --- |
+| --- | --- | --- | --- | --- |
 | subID | int | No | Unique (1,1) | PK |
 | subName | varchar (50) | No | | |
 | catID | int | No | | FK (Categories) |
