@@ -77,3 +77,12 @@ select * from Categories
 select * from Subcategories
 select * from QA_Details
 select * from PDFs
+select  q.Question, q.Answer, s.subName, c.catName 
+from QA_Details q
+	join Subcategories s
+		on q.subID = s.subID
+	join Categories c
+		on c.catID = s.catID
+where s.subID = 13
+
+
