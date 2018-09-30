@@ -17,7 +17,7 @@ The user interface must have access to the database storing the questions and an
 **Categories**
 
 | Column | Type | Null | Identity | Key |
-| --- |
+| --- | --- | --- | --- | --- |
 | catID | int | No | Unique (1,1) | PK |
 | catName | varchar (50) | No | | | |
 
@@ -45,7 +45,7 @@ V
 **QA_Details**
 
 | Column | Type | Null | Identity | Key |
-| --- |
+| --- | --- | --- | --- | --- |
 | Question | varchar (1000) | No | | |
 | Answer | varchar (3000) | No | | |
 | qaID | int | No | Unique (1,1) | PK |
