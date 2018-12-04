@@ -1,0 +1,30 @@
+﻿@model StudyGuide.Models.Subcategories
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Subcategories</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SubName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SubName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cat.CatName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SubId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

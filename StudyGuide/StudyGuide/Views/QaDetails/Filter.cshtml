@@ -1,0 +1,59 @@
+﻿@model IEnumerable<StudyGuide.Models.QaDetails>
+
+@{
+    ViewData["Title"] = "Questions";
+}
+
+<h2>@Model.FirstOrDefault().Sub.SubName</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Question
+            </th>            
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td id="question" value="@Model.ElementAt(0).Question">
+                
+            </td>
+        </tr>
+        <script type="text/javascript">
+            function nextQues() {
+                document.getElementById(question).
+            }
+        </script>
+        <tr>
+
+            <td>
+                <div id="toggle" style="display:none">@Model.FirstOrDefault().Answer</div>
+                <script type="text/javascript">
+                    function showDiv(toggle) {
+                        document.getElementById(toggle).style.display = 'block';
+                    }
+                </script>
+                <input type="button" id="ans_button" name="answer" value="Answer" onclick="showDiv('toggle'); hideshow()" />
+                <script type="text/javascript">
+                    var button = document.getElementById('ans_button')
+                    button.addEventListener('click', hideshow, false);
+
+                    function hideshow() {
+                        document.getElementById('ans_button').style.display = 'none';
+
+                        document.getElementById('next_button').style.display = 'initial';
+
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="next" style="display:none" value="Next Question"
+                       onclick="nextQues()" />
+            </td>
+        </tr>
+    </tbody>
+</table >

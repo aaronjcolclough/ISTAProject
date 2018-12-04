@@ -1,0 +1,19 @@
+﻿@model IEnumerable<StudyGuide.Models.Categories>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Study Guide</h2>
+        <p>Welcome! To begin studying, click the Study Guide link  above or below and select your question filters.</p>
+        <p>Good Luck!</p>
+
+        <div>
+            <a class="btn btn-primary" asp-controller="Categories" asp-action="Filter">Study Guide</a>
+        </div>
+        <br />
+    </div>
+</div>

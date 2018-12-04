@@ -1,0 +1,46 @@
+﻿@model IEnumerable<StudyGuide.Models.QaDetails>
+
+@{
+    ViewData["Title"] = "Questions";
+}
+
+<h2>Questions and Answers</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Question
+            </th>
+            <th>
+                Answer
+            </th>
+            <th>
+                Subcategory
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Answer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sub.SubName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.QaId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.QaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

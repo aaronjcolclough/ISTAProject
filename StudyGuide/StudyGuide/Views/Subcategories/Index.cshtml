@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StudyGuide.Models.Subcategories>
+
+@{
+    ViewData["Title"] = "SubCategories";
+}
+
+<h2>Subcategories</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Subcategory Name
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cat.CatName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SubId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.SubId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

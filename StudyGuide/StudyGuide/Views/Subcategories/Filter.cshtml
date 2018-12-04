@@ -1,0 +1,33 @@
+﻿@model IEnumerable<StudyGuide.Models.Subcategories>
+
+@{
+    ViewData["Title"] = "Filter";
+}
+
+<h2>Filter</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Subcategory Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a class="btn btn-primary" asp-controller="QaDetails" asp-action="Filter" asp-route-subId="@item.SubId">@Html.DisplayFor(modelItem => item.SubName)</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <a class="btn btn-primary" asp-controller="QaDetails" asp-action="Filter" asp-route-subId="0">All</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a asp-controller="Categories" asp-action="Filter">Back to Categories</a>
